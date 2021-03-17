@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <form action="/mayur" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Name">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="email">
+    <label for="status">Status</label>
+    <input type="text" name="status" id="status">
+    <button type="submit">Send</button>
+  </form>
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Status</th>
+    </tr>
+    <% for(var i=0; i< data.length; i++) {%>
+      <tr>
+        <td>
+          <%= data[i].name %>
+        </td>
+        <td>
+          <%= data[i].email %>
+        </td>
+        <td>
+          <%= data[i].status %>
+        </td>
+      </tr>
+      <% } %>
+
+
+
+  </table>
+</body>
+
+</html>
