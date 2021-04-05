@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('../DB/conn');
 const User = require('../model/usersSchema');
 /* GET home page. */
+
 router.get('/', async function (req, res, next) {
   try {
     const data = await User.find();
@@ -22,6 +23,7 @@ router.post("/mayur", async (req, res) => {
     status: req.body.status
   });
   console.log(mayur);
+
   try {
     const user = await mayur.save();
 
